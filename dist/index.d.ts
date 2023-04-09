@@ -39,6 +39,7 @@ declare class Channel extends Client {
     }): Message;
     queueMessage(message: Message): Promise<void>;
     private init;
+    destroy(error: Error): void;
 }
 declare class Message extends Client {
     private encoding;

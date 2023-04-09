@@ -107,6 +107,9 @@ class Channel extends Client {
         ret.catch((e) => this._created.reject(e));
         return this._created.promise;
     }
+    destroy(error) {
+        this._send?.({ action: "destroy", args: [error] });
+    }
 }
 class Message extends Client {
     encoding;
