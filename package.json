@@ -12,5 +12,10 @@
 		"@types/b4a": "^1.6.0",
 		"prettier": "^2.8.7",
 		"typescript": "^5.0.4"
-	}
+	},
+    "pnpm": {
+        "patchedDependencies": {
+            "b4a@1.6.3": "patches/b4a@1.6.3.patch"
+        }
+    }
 }
