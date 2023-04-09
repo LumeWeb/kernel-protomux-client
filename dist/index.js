@@ -134,8 +134,16 @@ class Message extends Client {
                 onmessage: !!this.onmessage,
             },
         }, async (data) => {
-            if (data?.args && data?.args[0] instanceof Uint8Array) {
-                data.args[0] = b4a.from(data.args[0]);
+            if (data.args) {
+                data.args = data.args.filter((arg) => {
+                    if (arg instanceof Uint8Array) {
+                        return b4a.from(arg);
+                    }
+                    return arg;
+                });
+            }
+            if (data?.args && data?.args[0]?.buffer instanceof Uint8Array) {
+                data.args[0].buffer = b4a.from(data.args[0].buffer);
             }
             switch (data.action) {
                 case "encode":
