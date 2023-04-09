@@ -171,6 +171,10 @@ class Channel extends Client {
 
     return this._created.promise as Promise<void>;
   }
+
+  public destroy(error: Error) {
+    this._send?.({ action: "destroy", args: [error] });
+  }
 }
 
 class Message extends Client {
