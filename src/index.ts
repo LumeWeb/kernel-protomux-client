@@ -233,18 +233,21 @@ class Message extends Client {
         switch (data.action) {
           case "encode":
             update({
+              id: data.id,
               action: "encode",
               args: [await this.encoding.encode?.(...data.args), data.args[0]],
             });
             break;
           case "decode":
             update({
+              id: data.id,
               action: "decode",
               args: [await this.encoding.decode?.(...data.args), data.args[0]],
             });
             break;
           case "preencode":
             update({
+              id: data.id,
               action: "preencode",
               args: [
                 await this.encoding.preencode?.(...data.args),
