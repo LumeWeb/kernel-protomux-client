@@ -255,6 +255,10 @@ class Message extends Client {
   public send(data: any) {
     this._send?.({ action: "send", args: [data] });
   }
+
+  public destroy(error: Error) {
+    this._send?.({ action: "destroy", args: [error] });
+  }
 }
 
 const createChannel = factory<Channel>(Channel, MODULE);
