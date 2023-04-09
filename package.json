@@ -1,11 +1,12 @@
 {
 	"name": "@lumeweb/kernel-protomux-client",
-    "version": "0.1.0",
-    "main": "dist/index.js",
+	"version": "0.1.0",
+	"main": "dist/index.js",
 	"dependencies": {
 		"@lumeweb/kernel-swarm-client": "git+https://git.lumeweb.com/LumeWeb/kernel-swarm-client.git",
 		"@lumeweb/libkernel-universal": "git+https://git.lumeweb.com/LumeWeb/libkernel-universal.git",
 		"b4a": "^1.6.3",
+		"buffer": "^6.0.3",
 		"p-defer": "^4.0.0"
 	},
 	"devDependencies": {

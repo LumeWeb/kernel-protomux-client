@@ -4,6 +4,7 @@ import { MODULE } from "@lumeweb/kernel-swarm-client";
 
 import defer from "p-defer";
 import b4a from "b4a";
+import { Buffer } from "buffer";
 
 export default class Protomux {
   private isProtomux = true;
@@ -219,7 +220,7 @@ class Message extends Client {
         if (data.args) {
           data.args = data.args.filter((arg: any) => {
             if (arg instanceof Uint8Array) {
-              return b4a.from(arg);
+              return Buffer.from(arg);
             }
 
             return arg;
@@ -227,7 +228,7 @@ class Message extends Client {
         }
 
         if (data?.args && data?.args[0]?.buffer instanceof Uint8Array) {
-          data.args[0].buffer = b4a.from(data.args[0].buffer);
+          data.args[0].buffer = Buffer.from(data.args[0].buffer);
         }
         switch (data.action) {
           case "encode":
