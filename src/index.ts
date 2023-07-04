@@ -1,9 +1,8 @@
-import { Client, factory } from "@lumeweb/libkernel-universal";
+import { Client, factory } from "@lumeweb/libkernel/module";
 
 import { MODULE } from "@lumeweb/kernel-swarm-client";
 
 import defer from "p-defer";
-import b4a from "b4a";
 import { Buffer } from "buffer";
 
 export default class Protomux {
@@ -50,7 +49,7 @@ export default class Protomux {
       handshake,
       onopen,
       onclose,
-      ondestroy
+      ondestroy,
     );
   }
 }
@@ -68,15 +67,16 @@ class Channel extends Client {
   private _inited = false;
 
   constructor(
+    module: string,
     mux: Protomux,
     protocol: string,
     id: any,
     handshake: any,
     onopen?: Function,
     onclose?: Function,
-    ondestroy?: Function
+    ondestroy?: Function,
   ) {
-    super();
+    super(module);
     this._mux = mux;
     this.protocol = protocol;
     this.id = id;
@@ -164,7 +164,7 @@ class Channel extends Client {
             this._channelId = data;
             this._created.resolve();
         }
-      }
+      },
     );
     this._send = update;
 
@@ -185,16 +185,19 @@ class Message extends Client {
 
   private _send?: (data?: any) => void;
 
-  constructor({
-    channel,
-    encoding = undefined,
-    onmessage = () => {},
-  }: {
-    channel: Channel;
-    encoding?: any;
-    onmessage: Function;
-  }) {
-    super();
+  constructor(
+    module: string,
+    {
+      channel,
+      encoding = undefined,
+      onmessage = () => {},
+    }: {
+      channel: Channel;
+      encoding?: any;
+      onmessage: Function;
+    },
+  ) {
+    super(module);
     this.channel = channel;
     this.encoding = encoding;
     this.onmessage = onmessage;
@@ -203,9 +206,6 @@ class Message extends Client {
 
   async init(): Promise<void> {
     const created = defer();
-
-    await this.loadLibs(MODULE);
-
     const [update] = this.connectModule(
       "createProtomuxMessage",
       {
@@ -262,7 +262,7 @@ class Message extends Client {
             created.resolve();
             break;
         }
-      }
+      },
     );
 
     this._send = update;

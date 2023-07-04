@@ -1,17 +1,31 @@
 {
 	"name": "@lumeweb/kernel-protomux-client",
 	"version": "0.1.0",
-	"main": "dist/index.js",
+	"type": "module",
+	"main": "lib/index.js",
+    "repository": {
+        "type": "git",
+        "url": "gitea@git.lumeweb.com:LumeWeb/kernel-protomux-client.git"
+    },
+	"readme": "ERROR: No README data found!",
+	"_id": "@lumeweb/kernel-protomux-client@0.1.0",
+    "scripts": {
+        "prepare": "presetter bootstrap",
+        "build": "run build",
+        "semantic-release": "semantic-release"
+    },
+	"devDependencies": {
+		"@lumeweb/node-library-preset": "^0.2.7",
+		"presetter": "*"
+	},
 	"dependencies": {
-		"@lumeweb/kernel-swarm-client": "git+https://git.lumeweb.com/LumeWeb/kernel-swarm-client.git",
-		"@lumeweb/libkernel-universal": "git+https://git.lumeweb.com/LumeWeb/libkernel-universal.git",
-		"b4a": "^1.6.3",
+		"@lumeweb/kernel-swarm-client": "^0.0.2-develop.2",
+		"@lumeweb/libkernel": "^0.1.0-develop.14",
 		"buffer": "^6.0.3",
 		"p-defer": "^4.0.0"
 	},
-	"devDependencies": {
-		"@types/b4a": "^1.6.0",
-		"prettier": "^2.8.7",
-		"typescript": "^5.0.4"
-	}
+    "files": ["lib"],
+    "publishConfig": {
+        "access": "public"
+    }
 }
