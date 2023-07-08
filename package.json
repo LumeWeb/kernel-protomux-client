@@ -18,7 +18,7 @@
 		"presetter": "*"
 	},
 	"dependencies": {
-		"@lumeweb/kernel-swarm-client": "^0.0.2-develop.7",
+		"@lumeweb/kernel-swarm-client": "^0.0.2-develop.8",
 		"@lumeweb/libkernel": "^0.1.0-develop.14",
 		"buffer": "^6.0.3",
 		"p-defer": "^4.0.0"
