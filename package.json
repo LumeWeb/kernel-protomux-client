@@ -1,6 +1,6 @@
 {
 	"name": "@lumeweb/kernel-protomux-client",
-	"version": "0.0.2-develop.10",
+	"version": "0.0.2-develop.11",
 	"type": "module",
 	"main": "lib/index.js",
 	"repository": {
