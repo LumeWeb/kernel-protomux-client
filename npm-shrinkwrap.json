@@ -8,7 +8,7 @@
 			"name": "@lumeweb/kernel-protomux-client",
 			"version": "0.0.2-develop.6",
 			"dependencies": {
-				"@lumeweb/kernel-swarm-client": "^0.0.2-develop.9",
+				"@lumeweb/kernel-swarm-client": "^0.0.2-develop.10",
 				"@lumeweb/libkernel": "^0.1.0-develop.16",
 				"buffer": "^6.0.3",
 				"p-defer": "^4.0.0"
@@ -1327,9 +1327,9 @@
 			}
 		},
 		"node_modules/@lumeweb/kernel-swarm-client": {
-			"version": "0.0.2-develop.9",
-			"resolved": "https://registry.npmjs.org/@lumeweb/kernel-swarm-client/-/kernel-swarm-client-0.0.2-develop.9.tgz",
-			"integrity": "sha512-K06qPsT9EkswB8MoG/K61VcCkDiIURCNUlKhe5CnBLVYedlbO3ernHdULg+WxESYGQ2WhqKCCW9cD2C6Wiq7qQ==",
+			"version": "0.0.2-develop.10",
+			"resolved": "https://registry.npmjs.org/@lumeweb/kernel-swarm-client/-/kernel-swarm-client-0.0.2-develop.10.tgz",
+			"integrity": "sha512-/HlvwwqGT4SYabrcIeecovc0m0uhzQvsL69kMupGe+amppkLQfuCMfvcujKTHZb4r4MVx0yKG7K+Kp3WQEaZLQ==",
 			"dependencies": {
 				"@lumeweb/libkernel": "^0.1.0-develop.9",
 				"async-mutex": "^0.4.0",
