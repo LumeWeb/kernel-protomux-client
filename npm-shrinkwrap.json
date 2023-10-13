@@ -8,7 +8,7 @@
 			"name": "@lumeweb/kernel-protomux-client",
 			"version": "0.0.2-develop.20",
 			"dependencies": {
-				"@lumeweb/kernel-swarm-client": "^0.1.0-develop.10",
+				"@lumeweb/kernel-swarm-client": "^0.1.0-develop.11",
 				"@lumeweb/libkernel": "^0.1.0-develop.66",
 				"buffer": "^6.0.3",
 				"p-defer": "^4.0.0"
