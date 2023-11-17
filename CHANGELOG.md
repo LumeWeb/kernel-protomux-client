@@ -1,3 +1,5 @@
+## [0.0.2-develop.23](https://git.lumeweb.com/LumeWeb/kernel-protomux-client/compare/v0.0.2-develop.22...v0.0.2-develop.23) (2023-11-17)
+
 ## [0.0.2-develop.22](https://git.lumeweb.com/LumeWeb/kernel-protomux-client/compare/v0.0.2-develop.21...v0.0.2-develop.22) (2023-10-13)
 
 ## [0.0.2-develop.21](https://git.lumeweb.com/LumeWeb/kernel-protomux-client/compare/v0.0.2-develop.20...v0.0.2-develop.21) (2023-10-12)
